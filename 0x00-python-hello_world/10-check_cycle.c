@@ -1,5 +1,9 @@
 #include "lists.h"
 
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+
 /**
  * check_cycle - Checks if a singly linked list has a cycle.
  * @list: Pointer to the head of the linked list.
