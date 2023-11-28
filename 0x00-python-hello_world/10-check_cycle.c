@@ -21,4 +21,3 @@ fast = fast->next->next;
 }
 return (0);
 }
-
