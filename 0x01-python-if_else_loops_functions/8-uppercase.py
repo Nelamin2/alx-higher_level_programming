@@ -2,7 +2,6 @@
 def uppercase(str):
     for char in str:
         if ord("a") <= ord(char) <= ord("z"):
-            i = chr(ord(char) - 32)
+            char = chr(ord(char) - 32)
         print("{:s}".format(char), end="")
     print()
-
