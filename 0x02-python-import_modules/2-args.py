@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import sys
+
     arg = sys.argv
     argc = len(sys.argv) - 1
     if argc > 1:
@@ -14,4 +15,3 @@ if __name__ == "__main__":
     else:
         print("{} argument:".format(argc))
         print("{}: {}".format(argc, arg[1]))
-
