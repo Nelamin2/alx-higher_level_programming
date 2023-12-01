@@ -16,4 +16,3 @@ if __name__ == "__main__":
     import sys
 
     infinite_add(sys.argv)
-
