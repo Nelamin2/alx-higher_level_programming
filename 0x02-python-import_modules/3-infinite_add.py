@@ -3,7 +3,7 @@
 def infinite_add(argv):
     argc = len(argv) - 1
     if argc == 0:
-        print("{}".format(argc))
+        print("{:d}".format(argc))
     else:
         i = 1
         add = 0
