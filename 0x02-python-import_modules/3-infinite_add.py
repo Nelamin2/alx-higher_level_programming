@@ -11,7 +11,7 @@ def infinite_add(argv):
             i+=1
         print("{:d}".format(add))
 
-    if __name__ == "__main__":
-        import sys
+if __name__ == "__main__":
+    import sys
 
-        infinite_add(sys.argv)
+     infinite_add(sys.argv)
