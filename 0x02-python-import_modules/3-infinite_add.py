@@ -4,6 +4,7 @@ def infinite_add(argv):
     argc = len(argv) - 1
     if argc == 0:
         print("{:d}".format(argc))
+        return
     else:
         i = 1
         add = 0
