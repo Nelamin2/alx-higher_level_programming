@@ -3,6 +3,7 @@
 
 from variable_load_5 import a
 
+
 def print_var():
     print(a)
 
