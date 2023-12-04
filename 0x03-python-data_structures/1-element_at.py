@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-def new_in_list(my_list, idx, element):
-    if idx < 0 or idx >= len(my_list):
-        return my_list
-    new_list = list(my_list)
-    new_list[idx] = element
-    return new_list
+def element_at(my_list, idx):
+    x = len(my_list)
+    if idx < 0 or idx >= x:
+        return None
+    else:
+        return my_list[idx]
