@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stddef.h>
 /**
  * reverse_list - Reverse a linked list
  * @head: Pointer to the head of the list
@@ -28,7 +29,6 @@ int is_palindrome(listint_t **head)
 listint_t *q = *head;
 listint_t *p = *head;
 listint_t *second_half;
-listint_t *revers;
 if (*head == NULL || (*head)->next == NULL)
 return (1);
 while (p != NULL && p->next != NULL)
@@ -37,7 +37,7 @@ p = p->next->next;
 q = q->next;
 }
 if (p != NULL)
-q = slow->next;
+q = q->next;
 second_half = reverse_list(q);
 while (second_half != NULL)
 {
