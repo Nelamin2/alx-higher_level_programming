@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-def divisible_by_2(my_list=[]):
-    new_list = []
-    for num in my_list:
-        new_list.append(False if num % 2 else True)
+def divisible_by_2(my_list=None):
+    if my_list is None:
+        my_list = []
+
+    new_list = [False if num % 2 else True for num in my_list]
     return new_list
+
