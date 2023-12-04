@@ -1,5 +1,5 @@
-#include "lists.h"
 #include <stddef.h>
+#include "lists.h"
 /**
  * reverse_list - Reverse a linked list
  * @head: Pointer to the head of the list
