@@ -8,4 +8,4 @@ real_num = 0
         except IndexError:
             break
     print("")
-    Return
+    Return real_num
