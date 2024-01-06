@@ -1,33 +1,49 @@
-def solveNQueens(n):
-    def is_safe(board, row, col):
-        # Check if there is a queen in the same column
-        for i in range(row):
-            if board[i] == col or \
-               board[i] - i == col - row or \
-               board[i] + i == col + row:
-                return False
-        return True
+#!/usr/bin/python3
+import sys
 
+def is_safe(board, row, col):
+    for i in range(row):
+        if board[i] == col or \
+           board[i] - i == col - row or \
+           board[i] + i == col + row:
+            return False
+    return True
+
+def solve_nqueens(n):
     def backtrack(row):
         if row == n:
-            # All queens are placed, add the current solution to the result
             result.append(board[:])
             return
-
         for col in range(n):
             if is_safe(board, row, col):
-                # Place a queen at (row, col)
                 board[row] = col
-                # Move on to the next row
                 backtrack(row + 1)
-                # Backtrack: remove the queen from (row, col) for other possibilities
                 board[row] = -1
 
+    if not isinstance(n, int):
+        print("N must be a number")
+        sys.exit(1)
+
+    if n < 4:
+        print("N must be at least 4")
+        sys.exit(1)
+
     result = []
-    # Initialize the board with no queens placed (-1 represents an empty cell)
     board = [-1] * n
     backtrack(0)
-    
-    # Format the result as a list of lists representing the placement of queens
-    formatted_result = [["." * i + "Q" + "." * (n - i - 1) for i in sol] for sol in result]
-    return formatted_result
+
+    for solution in result:
+        print(solution)
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: nqueens N")
+        sys.exit(1)
+
+    try:
+        n = int(sys.argv[1])
+        solve_nqueens(n)
+    except ValueError:
+        print("N must be a number")
+        sys.exit(1)
+
