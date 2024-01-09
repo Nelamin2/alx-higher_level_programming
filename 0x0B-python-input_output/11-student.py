@@ -1,4 +1,3 @@
-11-student.py
 #!/usr/bin/python3
 """Defines a class Student."""
 
@@ -13,8 +12,6 @@ class Student:
             last_name (str): The last name of the student.
             age (int): The age of the student.
         """
-
-
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
@@ -38,7 +35,5 @@ class Student:
         Args:
             json (dict): The key/value pairs to replace attributes with.
         """
-
-
         for k, v in json.items():
             setattr(self, k, v)
