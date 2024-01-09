@@ -2,8 +2,6 @@
 
 
 """a module  a string-to-JSON function."""
-
-
 import json
 
 
