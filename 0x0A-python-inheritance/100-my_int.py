@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """ A module Contains the class MyInt. """
 
-
 class MyInt(int):
     """ A rebel class of int """
     def __eq__(self, other):
