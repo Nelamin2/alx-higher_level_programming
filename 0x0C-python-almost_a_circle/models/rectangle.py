@@ -69,7 +69,7 @@ class Rectangle(Base):
 
     def display(self):
         '''Prints string representation of this rectangle.'''
-        printed  = '\n' * self.y + \
+        printed = '\n' * self.y + \
             (' ' * self.x + '#' * self.width + '\n') * self.height
         print(printed, end=' ')
 
