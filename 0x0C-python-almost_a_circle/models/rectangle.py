@@ -41,7 +41,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        self.validate_integer("x", value)
+        self.validate_attributes("x", value)
         self.__x = value
 
     @property
@@ -51,7 +51,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        self.validate_integer("y", value)
+        self.validate_attributes("y", value)
         self.__y = value
 
     def validate_attributes(self, name, value, eq=True):
