@@ -69,8 +69,9 @@ class Rectangle(Base):
 
     def display(self):
         '''Prints string representation of this rectangle.'''
-        for i in range(self.height):
-            print("#" * self.width)
+        printed  = '\n' * self.y + \
+            (' ' * self.x + '#' * self.width + '\n') * self.height
+        print(printed, end=' ')
 
     def __str__(self):
         '''Returns string of names and values'''
