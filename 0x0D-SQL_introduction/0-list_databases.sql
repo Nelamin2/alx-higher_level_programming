@@ -1,2 +1,2 @@
 -- list all database from server MYSQl server
-SHOW DATABASE;
+SHOW DATABASES;
