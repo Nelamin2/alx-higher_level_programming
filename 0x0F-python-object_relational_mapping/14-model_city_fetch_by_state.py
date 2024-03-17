@@ -1,4 +1,4 @@
-!/usr/bin/python3
+#!/usr/bin/python3
 """ prints the State object with the name passed as argument from the database
 """
 import sys
@@ -14,7 +14,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    cities = session.query(City).join(State).order_by(City.id).all()
-    for city in cities:
-        print("{}: ({}) {}".format(city.state.name, city.id, city.name))
-    session.close()
+    for instance in (session.query(State.name, City.id, City.name)
+                     .filter(State.id == City.state_id)):
+        print(instance[0] + ": (" + str(instance[1]) + ") " + instance[2])
+
