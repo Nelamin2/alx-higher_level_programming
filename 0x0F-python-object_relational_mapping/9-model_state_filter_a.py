@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" prints the State object that starts with the 
+"""prints the State object that starts with the
 letter a from the database hbtn_0e_6_usa
 """
 import sys
