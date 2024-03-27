@@ -1,5 +1,8 @@
 #!/bin/bash
-# shellcheck disable=SC2046
-if [ "$(curl -L -s -X HEAD -w "%{http_code}" "$1")" == '200' ]; then
-    curl -Ls "$1"
-fi
+# takes in a URL, sends a request to that URL, and displays the size of the body of the response
+response=$(mktemp)
+curl -sX GET -o "$response" "$1" -L
+size=$(wc -c < "$response")
+echo "Size of response body: $size bytes"
+rm "$response"
+
